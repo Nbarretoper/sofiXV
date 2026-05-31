@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@300;400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
     
     <style>
+        html {
+        scroll-behavior: smooth; /* Esto activa el deslizamiento suave */
+        }   
         /* Estilos Generales */
         * {
             box-sizing: border-box;
@@ -225,11 +228,11 @@
             <!-- REEMPLAZAR: Nombre de la cumpleañera -->
             <div class="hero-name">Sofia</div>
             <p style="font-style: italic; letter-spacing: 2px;">¡Vivamos una noche mágica!</p>
-            <div class="arrow-down">▼</div>
+            <a href="#fiesta" class="arrow-down">▼</a>
         </section>
 
         <!-- 2. INFORMACIÓN DE LA FIESTA -->
-        <section class="info-sec">
+        <section id="fiesta" class="info-sec">
             <div class="icon-magic">
                 <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19 2L5 14H12L9 22L20 10H13L19 2Z"/>
