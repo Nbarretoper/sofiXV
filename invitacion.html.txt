@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis 15 Años Mágicos</title>
+    <!-- Tipografías de estilo mágico y elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@300;400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos Generales */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0b0b0d;
+            color: #f5f2eb;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        
+        /* Contenedor tipo celular (Scroll Vertical) */
+        .wrapper {
+            max-width: 480px;
+            margin: 0 auto;
+            background: #121214;
+            box-shadow: 0 0 30px rgba(0,0,0,0.8);
+            min-height: 100vh;
+        }
+
+        /* Secciones */
+        section {
+            padding: 60px 20px;
+            position: relative;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        h2 {
+            font-family: 'Cinzel Decorative', serif;
+            color: #d4af37;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+
+        /* Botones Mágicos */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b1e0f, #5a1007);
+            color: #f5f2eb;
+            border: 2px solid #d4af37;
+            padding: 14px 28px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 40px;
+            text-decoration: none;
+            margin-top: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(139, 30, 15, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+            background: linear-gradient(135deg, #5a1007, #8b1e0f);
+        }
+
+        /* --- 1. PORTADA --- */
+        .hero {
+            background: linear-gradient(rgba(11, 11, 13, 0.6), #0b0b0d), 
+                        url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1000') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .hero-title {
+            font-family: 'Cinzel Decorative', serif;
+            color: #d4af37;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(212,175,55,0.6);
+        }
+        .hero-name {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 5rem;
+            color: #ffffff;
+            line-height: 0.8;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        .arrow-down {
+            margin-top: 50px;
+            animation: bounce 2s infinite;
+            color: #d4af37;
+            font-size: 1.5rem;
+        }
+
+        /* --- 2. INFORMACIÓN / PERGAMINO --- */
+        .info-sec {
+            background-color: #f2e6ce;
+            color: #2b2214;
+            border-bottom: none;
+        }
+        .info-sec h2 {
+            color: #5a1007;
+        }
+        .info-sec p {
+            color: #4a3b2c;
+        }
+        .icon-magic {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #5a1007;
+        }
+        .details-box {
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+        .details-box strong {
+            display: block;
+            font-size: 1.3rem;
+            margin-top: 10px;
+            color: #8b1e0f;
+        }
+
+        /* --- 3. GALERÍA --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+        .photo-placeholder {
+            width: 100%;
+            padding-top: 100%; /* Cuadrado perfecto */
+            background-color: #232326;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 8px;
+            position: relative;
+            background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+        }
+        .photo-placeholder span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        /* --- 4. DRESS CODE --- */
+        .dress-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #d4af37;
+        }
+
+        /* Animaciones */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <!-- 1. PANTALLA DE BIENVENIDA -->
+        <section class="hero">
+            <div class="hero-title"> MIS XV</div>
+            <!-- REEMPLAZAR: Nombre de la cumpleañera -->
+            <div class="hero-name">Sofia</div>
+            <p style="font-style: italic; letter-spacing: 2px;">¡Vivamos una noche mágica!</p>
+            <div class="arrow-down">▼</div>
+        </section>
+
+        <!-- 2. INFORMACIÓN DE LA FIESTA -->
+        <section class="info-sec">
+            <div class="icon-magic">⚡</div>
+            <h2>LA FIESTA</h2>
+            <div class="details-box">
+                <p>Te espero para celebrar una noche inolvidable en el Gran Comedor.</p>
+                <!-- REEMPLAZAR: Fecha y Hora -->
+                <h2>Sábado 8 de Agosto<br>20:30 a 05:00 horas muggle</h2>
+                <br>
+                <!-- REEMPLAZAR: Lugar y Dirección -->
+                <p>¿Donde?</p>
+                <p>En "Dr Carlos Maria de Pena 4751"</p>
+            </div>
+            <!-- REEMPLAZAR: Enlace de Google Maps en href="..." -->
+            <a href="https://maps.app.goo.gl/8N1pZ7tZZx5HLSez5" target="_blank" class="btn">Cómo Llegar</a>
+        </section>
+
+        <!-- 3. GALERÍA DE FOTOS -->
+        <section>
+            <h2>RECUERDOS MÁGICOS</h2>
+            <p>Un recorrido por mis mejores momentos antes del gran día.</p>
+            <div class="gallery-grid">
+                <!-- Podés cambiar estos bloques por etiquetas <img> cuando tengas tus fotos subidas -->
+                <div class="photo-placeholder"><span>[Tu Foto 1 Aquí]</span></div>
+                <div class="photo-placeholder"><span>[Tu Foto 2 Aquí]</span></div>
+                <div class="photo-placeholder"><span>[Tu Foto 3 Aquí]</span></div>
+                <div class="photo-placeholder"><span>[Tu Foto 4 Aquí]</span></div>
+            </div>
+        </section>
+
+        <!-- 4. CONFIRMACIÓN DE ASISTENCIA -->
+        <section style="background: linear-gradient(#121214, #1a1412);">
+            <h2>ASISTENCIA</h2>
+            <p>Por favor, confirma tu presencia antes de que las lechuzas cierren el correo de Hogwarts.</p>
+            <!-- REEMPLAZAR: Enlace a tu WhatsApp o Formulario en href="..." -->
+            <a href="https://wa.me/098522747" target="_blank" class="btn">Confirmar Asistencia</a>
+        </section>
+
+        <!-- 5. DRESS CODE -->
+        <section>
+            <div class="dress-icon">✨</div>
+            <h2>DRESS CODE</h2>
+            <p><strong>Elegante Gala</strong></p>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #a1a1aa;">Prepara tu mejor túnica o traje de gala para lucir en esta noche tan especial.</p>
+        </section>
+
+        <!-- 6. SECCIÓN DE INSTAGRAM -->
+        <section style="background: linear-gradient(135deg, #16161a, #0b0b0d);">
+            <h2>INSTAGRAM</h2>
+            <!-- REEMPLAZAR: Tu usuario de Instagram -->
+            <p style="font-size: 1.3rem; color: #d4af37; margin-bottom: 10px;">@barreto_soffi</p>
+            <p>¡Compartí tus fotos y videos de la fiesta conmigo!</p>
+            <!-- REEMPLAZAR: Link a tu perfil en href="..." -->
+            <a href="https://www.instagram.com/barreto_soffi/" target="_blank" class="btn" style="background: #121214;">Ver Instagram</a>
+        </section>
+        <!-- 8. REGALOS -->
+        <section style="background-color: #0b0b0d; border-bottom: none; padding-bottom: 80px;">
+            <div class="dress-icon">🎁</div>
+            <h2>REGALOS</h2>
+            <p>El mejor regalo es que vengas!!.</p>
+            <p style="margin-top: 40px; font-size: 0.8rem; color: #52525b;">¡Gracias por acompañarme en este momento tan importante!</p>
+        </section>
+
+    </div>
+
+</body>
+</html>
