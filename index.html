@@ -162,7 +162,29 @@
             font-size: 0.8rem;
             color: #666;
         }
+        .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 12px;                            /* Espacio uniforme entre fotos */
+    margin-top: 25px;
+    padding: 0 10px;                      /* Margen interno para que no pegue a los bordes */
+        }
 
+        .gallery-grid img {
+        width: 100%;                          /* Ocupa todo el ancho de su celda */
+        aspect-ratio: 1 / 1;                  /* Fuerza a que siempre sea un cuadrado perfecto */
+        object-fit: cover;                    /* Recorta y centra la foto automáticamente para que no se estire */
+        object-position: center;              /* Centra el encuadre de la imagen */
+        border: 2px solid #d4af37;            /* Tu borde dorado de Harry Potter */
+        border-radius: 8px;                   /* Bordes sutilmente redondeados */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
+        transition: transform 0.3s ease;
+        }
+
+/* Efecto opcional: se agranda un poquito al tocarla */
+        .gallery-grid img:hover {
+        transform: scale(1.03);
+        }
         /* --- 4. DRESS CODE --- */
         .dress-icon {
             font-size: 3rem;
@@ -214,10 +236,10 @@
             <p>Un recorrido por mis mejores momentos antes del gran día.</p>
             <div class="gallery-grid">
                 <!-- Podés cambiar estos bloques por etiquetas <img> cuando tengas tus fotos subidas -->
-                <img src="Fotos\cd0bd1fc-1af4-4762-aeb3-b93eb5c6b63a.jpeg" alt="Foto 1" class="photo">
-                <img src="Fotos\cd0bd1fc-1af4-4762-aeb3-b93eb5c6b63a.jpeg" alt="Foto 2" class="photo">
-                <img src="Fotos\cd0bd1fc-1af4-4762-aeb3-b93eb5c6b63a.jpeg" alt="Foto 3" class="photo">
-                <img src="\Fotos\cd0bd1fc-1af4-4762-aeb3-b93eb5c6b63a.jpeg" alt="Foto 4" class="photo">
+                <img src="Fotos/b4990b91-3bcc-4a10-9f38-8258dbc64786.jpeg" alt="Foto 1" class="photo">
+                <img src="Fotos/795446a4-6e08-426a-8a2a-00464a1c373a.jpeg" alt="Foto 2" class="photo">
+                <img src="Fotos/8671d0f4-a5cc-48d2-9079-fb856595eb12.jpeg" alt="Foto 3" class="photo">
+                <img src="Fotos/cd0bd1fc-1af4-4762-aeb3-b93eb5c6b63a.jpeg" alt="Foto 4" class="photo">
             </div>
         </section>
 
