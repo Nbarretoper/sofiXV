@@ -107,10 +107,13 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
         .arrow-down {
-            margin-top: 50px;
-            animation: bounce 2s infinite;
-            color: #d4af37;
-            font-size: 1.5rem;
+        margin-top: 50px;
+        animation: bounce 2s infinite;
+        color: #ffcc00;         /* Mismo color amarillo/dorado de tu diseño */
+        font-size: 1.5rem;
+        text-decoration: none;  /* Quita cualquier subrayado */
+        cursor: pointer;
+        display: inline-block;
         }
 
         /* --- 2. INFORMACIÓN / PERGAMINO --- */
@@ -216,6 +219,79 @@
             40% { transform: translateY(-10px); }
             60% { transform: translateY(-5px); }
         }
+
+        /* --- 6. SECCIÓN DE INSTAGRAM (ESTILO HARRY POTTER) --- */
+.instagram-section {
+    position: relative;
+    overflow: hidden;
+    /* Fondo que simula pergamino muy oscuro/mágico con matices borgoña de Gryffindor */
+    background: radial-gradient(circle at center, #1f1412 0%, #0d0908 100%);
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 70px 20px;
+}
+
+/* Efecto de líneas de mapa antiguo / constelaciones sutiles */
+.instagram-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0.04; /* Muy sutil para que no moleste la lectura */
+    background-image: 
+        radial-gradient(rgba(212, 175, 55, 0.8) 1px, transparent 1px), 
+        linear-gradient(to right, rgba(212, 175, 55, 0.3) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(212, 175, 55, 0.3) 1px, transparent 1px);
+    background-size: 40px 40px, 40px 40px, 40px 40px;
+    pointer-events: none;
+}
+
+/* Estilos de los textos */
+.insta-user {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.6rem; 
+    color: #ffcc00; /* Dorado brillante */
+    margin: 15px 0 5px 0;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.4);
+}
+
+.insta-text {
+    font-size: 0.95rem;
+    color: #dfdcd3;
+    max-width: 320px;
+    margin: 0 auto 20px auto;
+}
+
+/* Animación de destellos flotantes (Sparkles) */
+.magic-sparkles {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+}
+
+.sparkle {
+    position: absolute;
+    color: #ffcc00;
+    font-size: 14px;
+    opacity: 0;
+    animation: floatSparkle 4s infinite ease-in-out;
+}
+
+@keyframes floatSparkle {
+    0% { transform: translateY(10px) scale(0.5); opacity: 0; }
+    50% { opacity: 0.7; filter: drop-shadow(0 0 5px #ffcc00); }
+    100% { transform: translateY(-20px) scale(1.2); opacity: 0; }
+}
+
+/* Botón estilizado para combinar con el fondo */
+.btn-insta {
+    background: linear-gradient(135deg, #1a1311, #2d1d1a) !important;
+    border: 1px solid #c9a032 !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6) !important;
+}
+.btn-insta:hover {
+    background: linear-gradient(135deg, #2d1d1a, #1a1311) !important;
+    b
     </style>
 </head>
 <body>
@@ -282,14 +358,17 @@
         </section>
 
         <!-- 6. SECCIÓN DE INSTAGRAM -->
-        <section style="background: linear-gradient(135deg, #16161a, #0b0b0d);">
+<section class="instagram-section">
+            <div class="magic-sparkles">
+                <div class="sparkle" style="top: 20%; left: 15%; animation-delay: 0s;">✦</div>
+                <div class="sparkle" style="top: 70%; left: 80%; animation-delay: 1s;">✦</div>
+                <div class="sparkle" style="top: 40%; left: 85%; animation-delay: 1.5s;">✧</div>
+                <div class="sparkle" style="top: 80%; left: 20%; animation-delay: 2.5s;">✦</div>
             <h2>INSTAGRAM</h2>
-            <!-- REEMPLAZAR: Tu usuario de Instagram -->
-            <p style="font-size: 1.3rem; color: #d4af37; margin-bottom: 10px;">@barreto_soffi</p>
-            <p>¡Compartí tus fotos y videos de la fiesta conmigo!</p>
-            <!-- REEMPLAZAR: Link a tu perfil en href="..." -->
-            <a href="https://www.instagram.com/barreto_soffi/" target="_blank" class="btn" style="background: #121214;">Ver Instagram</a>
-        </section>
+            <p class="insta-user">@barreto_soffi</p>
+            <p class="insta-text">¡Compartí tus fotos y videos de la fiesta conmigo!</p>
+            <a href="https://www.instagram.com/barreto_soffi/" target="_blank" class="btn btn-insta">Ver Instagram</a>
+        </section>            
         <!-- 8. REGALOS -->
         <section style="background-color: #0b0b0d; border-bottom: none; padding-bottom: 80px;">
             <div class="dress-icon">🎁</div>
