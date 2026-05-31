@@ -223,12 +223,12 @@
         /* --- 6. SECCIÓN DE INSTAGRAM (ESTILO HARRY POTTER) --- */
 .instagram-section {
     position: relative;
-    overflow: hidden;
-    /* Fondo que simula pergamino muy oscuro/mágico con matices borgoña de Gryffindor */
     background: radial-gradient(circle at center, #1f1412 0%, #0d0908 100%);
     border-top: 1px solid rgba(212, 175, 55, 0.3);
     border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-    padding: 70px 20px;
+    /* Le damos bastante más espacio arriba y abajo para que respire */
+    padding: 80px 20px 100px 20px; 
+    box-sizing: border-box;
 }
 
 /* Efecto de líneas de mapa antiguo / constelaciones sutiles */
@@ -250,7 +250,7 @@
     font-family: 'Cinzel Decorative', serif;
     font-size: 1.6rem; 
     color: #ffcc00; /* Dorado brillante */
-    margin: 15px 0 5px 0;
+    margin: 15px 0 5px 0 !important;
     letter-spacing: 1px;
     text-shadow: 0 0 8px rgba(255, 204, 0, 0.4);
 }
@@ -259,7 +259,8 @@
     font-size: 0.95rem;
     color: #dfdcd3;
     max-width: 320px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 30px auto !important;
+    line-height: 1.5;
 }
 
 /* Animación de destellos flotantes (Sparkles) */
@@ -267,6 +268,7 @@
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
     pointer-events: none;
+    z-index: 0; /* Detrás de todo el contenido */
 }
 
 .sparkle {
@@ -285,13 +287,22 @@
 
 /* Botón estilizado para combinar con el fondo */
 .btn-insta {
-    background: linear-gradient(135deg, #1a1311, #2d1d1a) !important;
-    border: 1px solid #c9a032 !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.6) !important;
+    display: inline-block !important; /* Evita que se oculte */
+    background: linear-gradient(135deg, #8b1e0f, #5a1007) !important; /* Volvemos al rojo Gryffindor para que resalte más */
+    color: #f5f2eb !important;
+    border: 2px solid #d4af37 !important;
+    padding: 14px 28px !important;
+    border-radius: 40px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    letter-spacing: 2px !important;
+    position: relative;
+    z-index: 5; /* Lo trae al frente de cualquier capa de fondo */
 }
 .btn-insta:hover {
-    background: linear-gradient(135deg, #2d1d1a, #1a1311) !important;
- } 
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4) !important;
+    } 
  </style>
     
 </head>
